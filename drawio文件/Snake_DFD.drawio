@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36">
+  <diagram id="snake_system_dfd_level_1" name="第一层数据流程图">
+    <mxGraphModel dx="2179" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="普通用户" vertex="1">
+          <mxGeometry height="60" width="100" x="10" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="E2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="管理员/编辑" vertex="1">
+          <mxGeometry height="60" width="100" x="230" y="767" as="geometry" />
+        </mxCell>
+        <mxCell id="E3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="DeepSeek API&lt;br&gt;(外部大模型)" vertex="1">
+          <mxGeometry height="60" width="120" x="910" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="P1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="1.0&lt;br&gt;账号与权限处理" vertex="1">
+          <mxGeometry height="80" width="130" x="400" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="2.0&lt;br&gt;图鉴与收藏处理" vertex="1">
+          <mxGeometry height="80" width="130" x="400" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="P3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="3.0&lt;br&gt;图像智能识别处理" vertex="1">
+          <mxGeometry height="80" width="130" x="400" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="P4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="4.0&lt;br&gt;智能问答处理" vertex="1">
+          <mxGeometry height="80" width="130" x="400" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="P5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="5.0&lt;br&gt;投稿与审核处理" vertex="1">
+          <mxGeometry height="80" width="130" x="400" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="P6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="6.0&lt;br&gt;图片资源处理" vertex="1">
+          <mxGeometry height="80" width="130" x="400" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="D1: 用户与收藏库" vertex="1">
+          <mxGeometry height="60" width="140" x="890" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D2" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="D2: 图鉴物种数据库" vertex="1">
+          <mxGeometry height="60" width="140" x="890" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="D3: 投稿记录数据库" vertex="1">
+          <mxGeometry height="60" width="140" x="890" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="D4" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="D4: 本地图片存储系统" vertex="1">
+          <mxGeometry height="60" width="140" x="890" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="F1" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;" target="P1" value="注册/登录信息">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F2" edge="1" parent="1" source="P1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.8;entryX=0.75;entryY=0;" target="E1" value="返回 Token/状态">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F3" edge="1" parent="1" source="P1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" target="D1" value="存储/查询用户">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F4" edge="1" parent="1" source="D1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.7;entryX=1;entryY=0.7;" target="P1" value="用户信息">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F5" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.25;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="P2" value="搜索/筛选/收藏指令">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="405" />
+              <mxPoint x="130" y="360" />
+              <mxPoint x="420" y="360" />
+              <mxPoint x="420" y="258" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F6" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.75;entryX=1;entryY=0.75;" target="E1" value="图鉴列表/详情数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="248" />
+              <mxPoint x="180" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F7" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="D2" value="查询图鉴/物种">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8" edge="1" parent="1" source="D2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.8;entryX=1;entryY=0.8;" target="P2" value="物种数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8_2" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.8;exitY=0;entryX=0.2;entryY=1;" target="D1" value="存取收藏记录">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F9" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" target="P3" value="上传待识别图片">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F10" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.75;" value="Top-20 候选物种">
+          <mxGeometry relative="1" x="0.0011" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="230" y="448" />
+              <mxPoint x="230" y="480" />
+            </Array>
+            <mxPoint x="130" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F11" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.2;entryX=0.25;entryY=1;" target="D2" value="获取关联分类数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F12" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=1;entryX=0;entryY=0.25;" target="P4" value="自然语言提问(SSE)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F13" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.75;entryX=0.8;entryY=1;" target="E1" value="流式返回 AI 回答">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F14" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="E3" value="转发对话 Prompt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F15" edge="1" parent="1" source="E3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.75;entryX=1;entryY=0.75;" target="P4" value="返回推理与文本内容">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="590" />
+              <mxPoint x="720" y="590" />
+              <mxPoint x="720" y="628" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F16" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.25;exitY=1;entryX=0;entryY=0;" target="P5" value="提交投稿/纠错">
+          <mxGeometry relative="1" x="0.1022" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="35" y="720" />
+              <mxPoint x="280" y="720" />
+              <mxPoint x="280" y="712" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F17" edge="1" parent="1" source="E2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="P5" value="审核动作(Approve/Reject)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F18" edge="1" parent="1" source="P5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="D3" value="写入/读取待审数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F19" edge="1" parent="1" source="P5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0;entryX=0.5;entryY=1;" target="D2" value="审核通过自动入库">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="511" y="700" />
+              <mxPoint x="870" y="700" />
+              <mxPoint x="870" y="440" />
+              <mxPoint x="960" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F20" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=1;entryX=0;entryY=0.5;" target="P6" value="上传/导入图片文件">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F21" edge="1" parent="1" source="P6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=0;entryX=0.75;entryY=1;" target="E1" value="返回访问 URL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="465" y="850" />
+              <mxPoint x="70" y="850" />
+              <mxPoint x="70" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F22" edge="1" parent="1" source="P6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="D4" value="存入/映射物理文件">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

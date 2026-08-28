@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net" agent="GeminiCLI">
+  <diagram id="submission-flow" name="投稿模块流程图">
+    <mxGraphModel dx="1285" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="line10" edge="1" parent="1" source="node_dec2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" target="node_save" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7q7Pu1gF6JlV3IIFVtL-1" connectable="0" parent="line10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="是" vertex="1">
+          <mxGeometry relative="1" x="-0.1" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node_input" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="输入蛇类信息及照片" vertex="1">
+          <mxGeometry height="50" width="150" x="305" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="node_validate" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="校验数据完整性" vertex="1">
+          <mxGeometry height="50" width="110" x="325" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="node_dec1" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="数据合法？" vertex="1">
+          <mxGeometry height="90" width="90" x="335" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="j7q7Pu1gF6JlV3IIFVtL-4" edge="1" parent="1" source="node_err1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="node_input">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node_err1" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="显示错误：信息不全" vertex="1">
+          <mxGeometry height="50" width="150" x="470" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="node_upload" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="上传数据至服务器" vertex="1">
+          <mxGeometry height="50" width="110" x="325" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="node_dec2" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="上传成功？" vertex="1">
+          <mxGeometry height="90" width="90" x="330" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="j7q7Pu1gF6JlV3IIFVtL-7" edge="1" parent="1" source="node_err2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="node_input">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="605" />
+              <mxPoint x="720" y="175" />
+            </Array>
+            <mxPoint x="510" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node_err2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="显示错误：上传失败" vertex="1">
+          <mxGeometry height="50" width="150" x="490" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="node_save" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="后台存入数据库" vertex="1">
+          <mxGeometry height="50" width="110" x="320" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="node_success" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="显示投稿成功" vertex="1">
+          <mxGeometry height="50" width="150" x="300" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="line1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node_input" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="100" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line2" edge="1" parent="1" source="node_input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node_validate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line3" edge="1" parent="1" source="node_validate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node_dec1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line4" edge="1" parent="1" source="node_dec1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" target="node_err1" value="">
+          <mxGeometry relative="1" x="0.0054" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7q7Pu1gF6JlV3IIFVtL-3" connectable="0" parent="line4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="否" vertex="1">
+          <mxGeometry relative="1" x="-0.0259" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line6" edge="1" parent="1" source="node_dec1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" target="node_upload" value="">
+          <mxGeometry relative="1" x="-0.0054" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7q7Pu1gF6JlV3IIFVtL-2" connectable="0" parent="line6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="是" vertex="1">
+          <mxGeometry relative="1" x="-0.0746" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line7" edge="1" parent="1" source="node_upload" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node_dec2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line8" edge="1" parent="1" source="node_dec2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" target="node_err2" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line11" edge="1" parent="1" source="node_save" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node_success" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line12" edge="1" parent="1" source="node_success" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7q7Pu1gF6JlV3IIFVtL-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="开始" vertex="1">
+          <mxGeometry height="50" width="110" x="325" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="j7q7Pu1gF6JlV3IIFVtL-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="结束" vertex="1">
+          <mxGeometry height="50" width="110" x="320" y="860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

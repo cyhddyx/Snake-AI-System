@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-04-30T00:00:00.000Z" agent="drawio" version="21.1.2" type="device">
+  <diagram id="login-reg-flow" name="登录注册程序流程图">
+    <mxGraphModel dx="1200" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ==================== 起止框 (椭圆) ==================== -->
+
+        <!-- 开始 -->
+        <mxCell id="start" value="开始" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=14;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="380" y="20" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 结束 -->
+        <mxCell id="end" value="结束" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=14;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1220" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== 模式选择 ==================== -->
+
+        <!-- 判断: 选择登录/注册 -->
+        <mxCell id="mode" value="选择模式?" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=12;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="350" y="110" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- start → mode -->
+        <mxCell id="e-start-mode" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="start" target="mode">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== 注册分支 (左侧) ==================== -->
+
+        <!-- R1: 输入注册信息 (平行四边形) -->
+        <mxCell id="r1" value="输入用户名、邮箱、密码、确认密码" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="55" y="240" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- mode → r1 (注册) -->
+        <mxCell id="e-mode-r1" value="注册" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0;exitY=0.5;entryX=0.5;entryY=0;endArrow=classic;fontSize=11;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="mode" target="r1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="165" y="150"/>
+              <mxPoint x="165" y="200"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- R2: 判断密码一致 (菱形) -->
+        <mxCell id="r2" value="两次密码一致?" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="80" y="350" width="160" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- r1 → r2 -->
+        <mxCell id="e-r1-r2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="r1" target="r2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- R2E: 密码不一致提示 (平行四边形 - 错误) -->
+        <mxCell id="r2e" value="提示: 两次密码不一致" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="10" y="410" width="170" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- r2 → r2e (否/密码不一致) -->
+        <mxCell id="e-r2-r2e" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0;exitY=0.5;entryX=0;entryY=0.5;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="r2" target="r2e">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="387.5"/>
+              <mxPoint x="50" y="432.5"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- r2e → r1 (返回重新输入) -->
+        <mxCell id="e-r2e-r1" value="返回修改" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=1;exitY=0.5;entryX=1;entryY=0.5;endArrow=classic;fontSize=9;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="r2e" target="r1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="432"/>
+              <mxPoint x="290" y="270"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- R3: POST /users/register (处理框) -->
+        <mxCell id="r3" value="POST /users/register&#xa;提交注册请求" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="60" y="490" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- r2 → r3 (是/密码一致) -->
+        <mxCell id="e-r2-r3" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="r2" target="r3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- R4: 判断用户名/邮箱已存在 (菱形) -->
+        <mxCell id="r4" value="用户名或邮箱&#xa;已存在?" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="80" y="590" width="160" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- r3 → r4 -->
+        <mxCell id="e-r3-r4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="r3" target="r4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- R4E: 用户已存在提示 (平行四边形 - 错误) -->
+        <mxCell id="r4e" value="409: 用户名或邮箱已存在" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="10" y="605" width="185" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- r4 → r4e (是/已存在) -->
+        <mxCell id="e-r4-r4e" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0;exitY=0.5;entryX=0;entryY=0.5;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="r4" target="r4e">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="45" y="627.5"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- r4e → r1 (返回重新注册) -->
+        <mxCell id="e-r4e-r1" value="返回重新输入" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=1;exitY=0.5;entryX=1;entryY=0.5;endArrow=classic;fontSize=9;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="r4e" target="r1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="627"/>
+              <mxPoint x="290" y="270"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- R5: bcrypt哈希+创建用户 (处理框) -->
+        <mxCell id="r5" value="bcrypt哈希密码, 创建用户记录&#xa;(is_active=True, role=user)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="50" y="720" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- r4 → r5 (否/不存在) -->
+        <mxCell id="e-r4-r5" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="r4" target="r5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- R6: 返回201 (平行四边形 - 输出) -->
+        <mxCell id="r6" value="返回201 Created + 用户信息" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="65" y="820" width="190" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- r5 → r6 -->
+        <mxCell id="e-r5-r6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="r5" target="r6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- R7: 自动登录 (处理框) -->
+        <mxCell id="r7" value="自动调用 POST /auth/login&#xa;获取JWT Token" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="60" y="920" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- r6 → r7 -->
+        <mxCell id="e-r6-r7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="r6" target="r7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== 登录分支 (右侧) ==================== -->
+
+        <!-- L1: 输入登录凭证 (平行四边形) -->
+        <mxCell id="l1" value="输入用户名/邮箱、密码" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="620" y="240" width="210" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- mode → l1 (登录) -->
+        <mxCell id="e-mode-l1" value="登录" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;endArrow=classic;fontSize=11;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="mode" target="l1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="150"/>
+              <mxPoint x="725" y="200"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- L2: POST /auth/login (处理框) -->
+        <mxCell id="l2" value="POST /auth/login&#xa;提交登录请求" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="625" y="345" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- l1 → l2 -->
+        <mxCell id="e-l1-l2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="l1" target="l2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- L3: 判断用户+密码正确 (菱形) -->
+        <mxCell id="l3" value="用户存在且&#xa;密码正确?" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="625" y="445" width="200" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- l2 → l3 -->
+        <mxCell id="e-l2-l3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="l2" target="l3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- L3E: 凭证错误 (平行四边形 - 错误) -->
+        <mxCell id="l3e" value="401: 用户名、邮箱或密码错误" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="728" y="460" width="195" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- l3 → l3e (否/验证失败) -->
+        <mxCell id="e-l3-l3e" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="l3" target="l3e">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- l3e → l1 (返回重新登录) -->
+        <mxCell id="e-l3e-l1" value="返回重新输入" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=0;entryX=1;entryY=0.5;endArrow=classic;fontSize=9;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="l3e" target="l1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="460"/>
+              <mxPoint x="600" y="270"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- L4: 判断用户是否禁用 (菱形) -->
+        <mxCell id="l4" value="用户未被禁用&#xa;(is_active)?" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="630" y="570" width="190" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- l3 → l4 (是/验证通过) -->
+        <mxCell id="e-l3-l4" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="l3" target="l4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- L4E: 已禁用提示 (平行四边形 - 错误) -->
+        <mxCell id="l4e" value="403: 用户已被禁用" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="735" y="585" width="175" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- l4 → l4e (是/已禁用) -->
+        <mxCell id="e-l4-l4e" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="l4" target="l4e">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- l4e → l1 (返回重新登录) -->
+        <mxCell id="e-l4e-l1" value="返回重新输入" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=0;entryX=1;entryY=0.5;endArrow=classic;fontSize=9;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="l4e" target="l1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="585"/>
+              <mxPoint x="600" y="270"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- L5: 创建JWT (处理框) -->
+        <mxCell id="l5" value="创建JWT访问令牌&#xa;(HMAC-SHA256签名, 有效期7天)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="615" y="695" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- l4 → l5 (否/正常) -->
+        <mxCell id="e-l4-l5" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;fontSize=10;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="l4" target="l5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- L6: 返回Token (平行四边形 - 输出) -->
+        <mxCell id="l6" value="返回TokenResponse&#xa;(access_token + user + expires_in)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=10;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="615" y="795" width="220" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- l5 → l6 -->
+        <mxCell id="e-l5-l6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="l5" target="l6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== 汇聚区域 (中央) ==================== -->
+
+        <!-- C1: 存储Token (处理框) -->
+        <mxCell id="c1" value="存储Token到localStorage, 设置Axios认证拦截器" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1010" width="400" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- r7 → c1 -->
+        <mxCell id="e-r7-c1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0;entryY=0.5;endArrow=classic;" edge="1" parent="1" source="r7" target="c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="1037"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- l6 → c1 -->
+        <mxCell id="e-l6-c1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=1;entryY=0.5;endArrow=classic;" edge="1" parent="1" source="l6" target="c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="1037"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- C2: 跳转页面 (处理框) -->
+        <mxCell id="c2" value="根据redirect参数跳转目标页面 (默认 /encyclopedia)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1115" width="340" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- c1 → c2 -->
+        <mxCell id="e-c1-c2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="c1" target="c2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- c2 → end -->
+        <mxCell id="e-c2-end" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;" edge="1" parent="1" source="c2" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== 图例标注 ==================== -->
+
+        <!-- 注册流程标签 -->
+        <mxCell id="reg-label" value="【注册流程】" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontFamily=Microsoft YaHei;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="200" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 登录流程标签 -->
+        <mxCell id="login-label" value="【登录流程】" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontFamily=Microsoft YaHei;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="200" width="200" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 图例: 起止框 -->
+        <mxCell id="legend-start" value="开始/结束" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=9;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1050" width="70" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-label-1" value="起止框(椭圆)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="105" y="1050" width="90" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 图例: 处理框 -->
+        <mxCell id="legend-process" value="处理" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=9;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1090" width="70" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-label-2" value="处理框(矩形)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="105" y="1090" width="90" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 图例: 判断框 -->
+        <mxCell id="legend-decision" value="判断" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=9;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1130" width="70" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-label-3" value="判断框(菱形)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="105" y="1130" width="90" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 图例: 输入输出框 -->
+        <mxCell id="legend-io" value="输入/输出" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=none;strokeColor=#000000;fontSize=8;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1175" width="70" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-label-4" value="输入/输出框(平行四边形)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="105" y="1175" width="120" height="30" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

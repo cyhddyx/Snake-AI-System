@@ -1,0 +1,163 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36">
+  <diagram id="snake-top-dfd" name="顶层数据流图">
+    <mxGraphModel dx="566" dy="297" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="普通用户" vertex="1">
+          <mxGeometry height="70" width="120" x="70" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="管理员 / 编辑" vertex="1">
+          <mxGeometry height="70" width="130" x="970" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;蛇类图鉴与智能识别系统&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="250" x="460" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="user" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="注册信息 / 登录信息">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="210" />
+              <mxPoint x="420" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="user" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="图鉴浏览、检索、筛选请求">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="250" />
+              <mxPoint x="420" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="user" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="蛇类图片识别请求 / 上传图片">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="290" />
+              <mxPoint x="420" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="user" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="智能问答问题">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="330" />
+              <mxPoint x="420" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="user" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="收藏请求 / 投稿信息">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="370" />
+              <mxPoint x="420" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="user" value="认证结果 / Token / 用户信息">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="430" />
+              <mxPoint x="270" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="user" value="物种列表 / 详情 / 图片信息">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="470" />
+              <mxPoint x="270" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="user" value="Top-K 识别结果 / 置信度">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="510" />
+              <mxPoint x="270" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="user" value="问答结果 / 流式内容">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="550" />
+              <mxPoint x="270" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="user" value="收藏同步结果 / 投稿反馈">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="590" />
+              <mxPoint x="270" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="用户与角色管理请求">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="210" />
+              <mxPoint x="750" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="物种 / 分类 / 图鉴维护请求">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="250" />
+              <mxPoint x="750" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="投稿审核请求：通过 / 驳回 / 修改">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="290" />
+              <mxPoint x="750" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="图片上传 / 导入 / 资源管理请求">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="330" />
+              <mxPoint x="750" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="system" value="系统数据查询 / 统计查看请求">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="370" />
+              <mxPoint x="750" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="admin" value="用户管理结果 / 权限反馈">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="430" />
+              <mxPoint x="890" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="admin" value="维护结果 / 审核状态 / 入库结果">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="470" />
+              <mxPoint x="890" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;fontSize=12;" target="admin" value="图片 URL / 资源列表 / 统计数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="510" />
+              <mxPoint x="890" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

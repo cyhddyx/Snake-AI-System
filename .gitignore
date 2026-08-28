@@ -1,0 +1,41 @@
+# ===== 环境变量与密钥（切勿提交）=====
+.env
+.env.local
+.env.*.local
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# ===== Node / 前端 =====
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.eslintcache
+*.tsbuildinfo
+*.local
+
+# ===== IDE =====
+.idea/
+*.suo
+*.sw?
+
+# ===== 测试产物 =====
+test-results/
+playwright-report/
+__screenshots__/
+
+# ===== 训练数据集（体积过大，不入库）=====
+training_workspace/HMP/
+training_workspace/SnakeCLEF2023-val-large_size/
+training_workspace/images/
+training_workspace/China_Snake_Dataset/
+
+# ===== 运行时图片资源 =====
+image/images/
+image/storage/

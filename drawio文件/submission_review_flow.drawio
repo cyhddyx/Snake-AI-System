@@ -1,0 +1,150 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="submission-review-flow" name="投稿审核模块流程图">
+    <mxGraphModel dx="1414" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v_start" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="开始" vertex="1">
+          <mxGeometry height="50" width="180" x="430" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v_enter" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="编辑进入审核页" vertex="1">
+          <mxGeometry height="60" width="200" x="420" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="v_load" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="加载待审投稿列表" vertex="1">
+          <mxGeometry height="60" width="160" x="440" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="v_has_pending" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="有待审投稿？" vertex="1">
+          <mxGeometry height="90" width="130" x="455" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="v_no_pending" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="输出：暂无待审投稿" vertex="1">
+          <mxGeometry height="60" width="220" x="100" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="v_end_none" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="结束" vertex="1">
+          <mxGeometry height="50" width="140" x="140" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="v_select" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="选择投稿并查看详情" vertex="1">
+          <mxGeometry height="60" width="200" x="420" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="v_is_pending" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="状态仍为&#xa;pending？" vertex="1">
+          <mxGeometry height="100" width="170" x="435" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="v_processed" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="输出：该投稿已处理，&#xa;刷新列表" vertex="1">
+          <mxGeometry height="60" width="240" x="80" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="v_end_processed" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="结束" vertex="1">
+          <mxGeometry height="50" width="140" x="130" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="v_pass" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="审核通过？" vertex="1">
+          <mxGeometry height="90" width="130" x="455" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="v_reject_note" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="输入驳回原因&#xa;（可留空）" vertex="1">
+          <mxGeometry height="60" width="180" x="930" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="v_reject_update" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="更新状态为 rejected&#xa;记录审核人和时间" vertex="1">
+          <mxGeometry height="70" width="200" x="920" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="v_reject_out" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="输出：驳回结果" vertex="1">
+          <mxGeometry height="60" width="160" x="940" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="v_end_reject" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="结束" vertex="1">
+          <mxGeometry height="50" width="140" x="950" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="v_is_correction" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="是否纠错投稿？" vertex="1">
+          <mxGeometry height="100" width="170" x="435" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="v_update_existing" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="更新正式物种、&#xa;详情和图片" vertex="1">
+          <mxGeometry height="70" width="220" x="120" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="v_create_new" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="新建正式物种、&#xa;详情和图片" vertex="1">
+          <mxGeometry height="70" width="220" x="700" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="v_merge" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="A" vertex="1">
+          <mxGeometry height="26" width="26" x="507" y="1088" as="geometry" />
+        </mxCell>
+        <mxCell id="v_approve_update" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="更新投稿状态为 approved&#xa;记录审核人和时间" vertex="1">
+          <mxGeometry height="70" width="260" x="390" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="v_approve_out" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="输出：审核通过并完成入库" vertex="1">
+          <mxGeometry height="60" width="200" x="420" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="v_end_main" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;strokeWidth=2;" value="结束" vertex="1">
+          <mxGeometry height="50" width="140" x="450" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="v_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_enter" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="v_enter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_load" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="v_load" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_has_pending" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="v_has_pending" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="v_no_pending" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="v_no_pending" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_end_none" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="v_has_pending" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_select" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="v_select" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_is_pending" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="v_is_pending" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="v_processed" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="v_processed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_end_processed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="v_is_pending" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_pass" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="v_pass" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="v_reject_note" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="v_reject_note" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_reject_update" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="v_reject_update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_reject_out" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="v_reject_out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_end_reject" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="v_pass" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_is_correction" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="v_is_correction" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="v_update_existing" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="v_is_correction" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="v_create_new" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="v_update_existing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" target="v_merge" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="1111" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="v_create_new" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="v_merge" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="1111" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="v_merge" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_approve_update" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="v_approve_update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_approve_out" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="v_approve_out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="v_end_main" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
